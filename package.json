@@ -1,0 +1,41 @@
+{
+  "name": "orm_sqlite",
+  "version": "1.0.0",
+  "description": "Pequeño módulo para gestionar bases de datos sqlite en Javascript",
+  "main": "index.js",
+  "_moduleAliases": {
+    "@root": "./src",
+    "@deep": "src/some/very/deep/directory/or/file",
+    "@my_module": "lib/some-file.js",
+    "something": "src/foo"
+  },
+  "scripts": {
+    "test": "jest --runInBand",
+    "newModel": "node ./src/orm/newModel.js",
+    "newRequest": "node ./src/orm/newRequest.js",
+    "build": "microbundle"
+  },
+  "keywords": [
+    "sqlite",
+    "sqlite3",
+    "database",
+    "local"
+  ],
+  "author": "Ismael Contreras <info@atriontechsd.com>",
+  "license": "MIT",
+  "dependencies": {
+    "microbundle": "^0.15.1",
+    "module-alias": "^2.2.2",
+    "sqlite3": "^5.1.4"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/tests"
+    ]
+  }
+}
