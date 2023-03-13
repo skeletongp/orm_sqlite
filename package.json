@@ -1,19 +1,13 @@
 {
   "name": "orm_sqlite",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Pequeño módulo para gestionar bases de datos sqlite en Javascript",
   "main": "index.js",
-  "_moduleAliases": {
-    "@root": "./src",
-    "@deep": "src/some/very/deep/directory/or/file",
-    "@my_module": "lib/some-file.js",
-    "something": "src/foo"
-  },
   "scripts": {
     "test": "jest --runInBand",
     "newModel": "node ./src/orm/newModel.js",
     "newRequest": "node ./src/orm/newRequest.js",
-    "build": "microbundle"
+    "build": "webpack --mode production"
   },
   "keywords": [
     "sqlite",
@@ -21,21 +15,27 @@
     "database",
     "local"
   ],
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
+  },
   "author": "Ismael Contreras <info@atriontechsd.com>",
   "license": "MIT",
   "dependencies": {
-    "microbundle": "^0.15.1",
-    "module-alias": "^2.2.2",
-    "sqlite3": "^5.1.4"
-  },
-  "devDependencies": {
     "jest": "^29.5.0",
-    "webpack": "^5.76.1",
-    "webpack-cli": "^5.0.1"
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.4"
   },
   "jest": {
     "testPathIgnorePatterns": [
       "/tests"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
   }
 }

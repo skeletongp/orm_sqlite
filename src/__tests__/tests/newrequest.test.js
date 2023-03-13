@@ -4,12 +4,12 @@ const path = require("path");
 
 test("CanGenerateRequest", () => {
     const modelName = "Test";
-    const requestPath = "../testrequests";
+    const requestPath = "src/testrequests";
     const table = "test";
 
     
   // Eliminar el archivo de modelo si ya existe
-  const filePath =path.join('./src','testrequests',`request${modelName}.js`);
+  const filePath =`./${requestPath}/request${modelName}`;
   if (fs.existsSync(filePath)) {
     fs.unlinkSync(filePath);
   }

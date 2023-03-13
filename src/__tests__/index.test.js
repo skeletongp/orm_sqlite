@@ -1,5 +1,4 @@
 const {Database} = require('../index');
-require('module-alias/register')
 
 //test if the Database class is exported using jest
 

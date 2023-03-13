@@ -13,7 +13,7 @@ if (!modelName || !modelName.match(regex)) {
 
 // Create model file
 const requestFile = `request${modelName}.js`;
-const filePath = path.join(__dirname, route, requestFile);
+const filePath = `./${route}/${requestFile}`;
 if (fs.existsSync(filePath)) {
   console.error(`${requestFile} already exists`);
   process.exit(1);

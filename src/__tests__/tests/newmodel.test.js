@@ -5,7 +5,7 @@ const { execSync } = require("child_process");
 test("CanGenerateModel", () => {
   const modelName = "Test";
   const table = "test";
-  const route = "../testmodels";
+  const route = "src/testmodels";
 
   // Eliminar el archivo de modelo si ya existe
   const filePath = path.join('./src','testmodels',`${modelName}.js`);

@@ -15,7 +15,8 @@ if (!modelName || !modelName.match(regex)) {
 
 // Create model file
 const modelFile = `${modelName}.js`;
-const filePath = path.join(__dirname, route, modelFile);
+const filePath = `./${route}/${modelFile}`;
+console.log(filePath)
 if (fs.existsSync(filePath)) {
   console.log(`${modelFile} already exists`);
   process.exit(0);
@@ -34,7 +35,7 @@ class ${modelName} extends Model {
 
   //must set db has an instance of Database class using method open
   constructor(db, data = {}) {
-    super(db,"${table}", ${modelName}.columns, ${modelName}.searchables); // 
+    super(db,"${table}", ${modelName}.columns, ${modelName}.searchables); //
     this.softDeletes = false; // set true to enable soft deletes if table has a deleted_at column
   }
 

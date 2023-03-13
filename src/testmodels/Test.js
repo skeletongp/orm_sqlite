@@ -5,7 +5,7 @@ class Test extends Model {
 
   //must set db has an instance of Database class using method open
   constructor(db, data = {}) {
-    super(db,"test", Test.columns, Test.searchables); // 
+    super(db,"test", Test.columns, Test.searchables); //
     this.softDeletes = false; // set true to enable soft deletes if table has a deleted_at column
   }
 
